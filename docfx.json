@@ -44,8 +44,8 @@
     "globalMetadata": {
       "_appName": "",
       "_appTitle": "Foster",
-      "_appLogoPath": "./public/images/Foster.png",
-      "_appFaviconPath": "./public/images/Icon.png",
+      "_appLogoPath": "images/Foster.png",
+      "_appFaviconPath": "images/Icon.png",
       "_enableSearch": true,
       "pdf": false
     }
