@@ -1,0 +1,4 @@
+<div class="footer">
+  {{{_appFooter}}}
+  {{^_appFooter}}<strong>Made with ♥ by the Foster's community</strong>{{/_appFooter}}
+</div>
