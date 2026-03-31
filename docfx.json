@@ -24,9 +24,7 @@
           "api/*.yml"
         ],
         "exclude": [
-          "_site/**",
-          "api/SDL3.*.yml",
-          "api/Foster.Framework.JsonConverters.*.yml"
+          "_site/**"
         ]
       }
     ],
