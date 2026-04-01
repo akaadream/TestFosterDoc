@@ -1031,3 +1031,42 @@ table td p {
     border-top-left-radius: 0;
     border-top-right-radius: 0
 }
+
+/* Theme Toggle */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    background: var(--search-bg-color);
+    border: 1px solid var(--search-border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 16px;
+    transition: color .2s, background-color .2s
+}
+
+.theme-toggle:hover {
+    color: var(--link-active-color)
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px
+}
+
+.theme-icon-auto,
+.theme-icon-dark,
+.theme-icon-light {
+    display: none
+}
+
+html[data-theme-setting="auto"] .theme-icon-auto,
+html[data-theme-setting="dark"] .theme-icon-dark,
+html[data-theme-setting="light"] .theme-icon-light {
+    display: inline
+}

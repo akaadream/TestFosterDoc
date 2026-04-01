@@ -29,7 +29,9 @@
     --text-color: #e1e1e1;
     --link-color: #DEB813;
     --link-hover-color: #fadd5b;
-    
+    --link-active-color: #DEB813;
+    --link-active-bg-color: rgba(222,184,19,.15);
+
     /* Mobile Topbar */
 
     --topbar-bg-color: #18191c;
@@ -117,8 +119,128 @@
     --code-breakpoint-color: #8c2f2f;
 }
 
+/* Light Theme */
+
+[data-bs-theme="light"]
+{
+    /* General */
+
+    --main-bg-color: #ffffff;
+    --footer-bg-color: rgba(0,0,0,.05);
+    --separator-color: #d1d5db;
+
+    --table-strip-bg-color: #f3f4f6;
+    --table-header-bg-color: #e5e7eb;
+    --table-header-color: #1f2937;
+    --table-header-border-color: #d1d5db;
+
+    /* Text */
+
+    --appname-color: #111827;
+
+    --h1-color: #111827;
+    --h2-color: #1f2937;
+    --h3-color: #374151;
+    --h4-color: #111827;
+    --h5-color: #4b5563;
+
+    --text-color: #1f2937;
+    --link-color: #b8960f;
+    --link-hover-color: #9a7d0c;
+    --link-active-color: #b8960f;
+    --link-active-bg-color: rgba(184,150,15,.12);
+
+    /* Mobile Topbar */
+
+    --topbar-bg-color: #f9fafb;
+
+    /* Button */
+
+    --button-color: #6b7280;
+
+    /* Sidebar */
+
+    --sidebar-bg-color: #f3f4f6;
+
+    --search-color: #374151;
+    --search-bg-color: #ffffff;
+    --search-searchicon-color: #6b7280;
+    --search-border-color: #d1d5db;
+
+    --sidebar-item-color: #1f2937;
+    --sidebar-active-item-color: #b8960f;
+    --sidebar-level1-item-bg-color: #e5e7eb;
+    --sidebar-level1-item-hover-bg-color: #d1d5db;
+
+    --toc-filter-color: #374151;
+    --toc-filter-bg-color: #ffffff;
+    --toc-filter-filtericon-color: #6b7280;
+    --toc-filter-clearicon-color: #dc2626;
+    --toc-filter-border-color: #d1d5db;
+
+    /* Scrollbars */
+
+    --scrollbar-bg-color: transparent;
+    --scrollbar-thumb-bg-color: rgba(0,0,0,.2);
+    --scrollbar-thumb-border-color: transparent;
+
+    /* Alerts and Blocks */
+
+    --alert-info-border-color: rgba(59,130,246,.5);
+    --alert-info-bg-color: rgba(59,130,246,.08);
+
+    --alert-warning-border-color: rgba(245,158,11,.5);
+    --alert-warning-bg-color: rgba(245,158,11,.08);
+
+    --alert-danger-border-color: rgba(239,68,68,.5);
+    --alert-danger-bg-color: rgba(239,68,68,.08);
+
+    --alert-tip-border-color: rgba(0,0,0,.3);
+    --alert-tip-bg-color: rgba(0,0,0,.04);
+
+    --blockquote-border-color: rgba(0,0,0,.3);
+    --blockquote-bg-color: rgba(0,0,0,.04);
+
+    --breadcrumb-bg-color: #f3f4f6;
+
+    /* Tabs */
+
+    --nav-tabs-border-color: #d1d5db;
+    --nav-tabs-link-hover-border-color: #e5e7eb #e5e7eb transparent;
+    --nav-tabs-link-active-color: #111827;
+    --nav-tabs-link-active-bg: var(--main-bg-color);
+    --nav-tabs-link-active-border-color: var(--nav-tabs-border-color) var(--nav-tabs-border-color) var(--main-bg-color);
+
+    /* Inline Code */
+
+    --ref-bg-color: #f3f4f6;
+    --ref-color: #4d7c0f;
+
+    /* Code Blocks */
+
+    --code-bg-color: #f8f8f8;
+    --code-color: #24292e;
+    --code-keyword-color: #d73a49;
+    --code-comment-color: #6a737d;
+    --code-macro-color: #6f42c1;
+    --code-string-color: #032f62;
+    --code-string-escape-color: #22863a;
+    --code-field-color: #24292e;
+    --code-function-color: #6f42c1;
+    --code-control-color: #d73a49;
+    --code-class-color: #22863a;
+    --code-number-color: #005cc5;
+    --code-params-color: #e36209;
+    --code-breakpoint-color: #ffeef0;
+}
+
 /* Code Block Overrides */
 
 pre, legend {
     --scrollbar-thumb-bg-color: #333;
+}
+
+[data-bs-theme="light"] pre,
+[data-bs-theme="light"] legend {
+    --scrollbar-thumb-bg-color: #c0c0c0;
 }

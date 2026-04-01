@@ -1,5 +1,49 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+// Theme toggle
+
+(function () {
+    var hljsDark = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css';
+    var hljsLight = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css';
+
+    function resolveTheme(setting) {
+        return setting === 'auto'
+            ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            : setting;
+    }
+
+    function applyTheme(setting) {
+        var resolved = resolveTheme(setting);
+        document.documentElement.setAttribute('data-theme-setting', setting);
+        document.documentElement.setAttribute('data-bs-theme', resolved);
+        var hljsLink = document.getElementById('hljs-theme');
+        if (hljsLink) {
+            hljsLink.href = resolved === 'light' ? hljsLight : hljsDark;
+        }
+    }
+
+    // Set initial data-theme-setting (data-bs-theme is already set by inline script in head)
+    var initial = localStorage.getItem('theme') || 'auto';
+    document.documentElement.setAttribute('data-theme-setting', initial);
+
+    // Listen for OS preference changes when in auto mode
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+        var current = localStorage.getItem('theme') || 'auto';
+        if (current === 'auto') {
+            applyTheme('auto');
+        }
+    });
+
+    // Expose toggle function globally
+    window.toggleTheme = function () {
+        var cycle = { auto: 'dark', dark: 'light', light: 'auto' };
+        var current = localStorage.getItem('theme') || 'auto';
+        var next = cycle[current] || 'auto';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+    };
+})();
+
 function toggleMenu() {
                
     var sidebar = document.getElementById("sidebar");
